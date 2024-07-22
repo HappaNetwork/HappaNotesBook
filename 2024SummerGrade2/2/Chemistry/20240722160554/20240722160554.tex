@@ -1,0 +1,477 @@
+
+\documentclass[10pt,cn]{elegantbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgtermes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mdframed}
+\usepackage{booktabs,array,multirow}
+\usepackage{esint}
+\usepackage{xeCJK}
+\usepackage{adjustbox}
+%\graphicspath{ {./images/} }
+
+\usepackage{ulem}
+\usepackage{hyperref}%目录跳转
+
+\usepackage{fontspec} % 用于处理字体
+%\setmainfont{TeX Gyre Termes} % 设置主要字体
+
+
+\usepackage{fancyhdr}   % 导入 fancyhdr 包，用于定制页眉和页脚
+\usepackage{datetime}   % 导入 datetime 包，用于格式化日期
+
+%\fancyhead[L]{20240722} % 左侧页眉
+%\fancyhead[R]{\mydate\today} % 右侧页眉，显示当前日期，格式为“日 月 年”
+
+\title{HappaChemistryNotes}
+\subtitle{化学笔记}
+\author{OyamaHappa}
+\date{\today}
+\version{20240721222406}
+\logo{logo.jpg}
+\cover{cover.jpg}
+
+
+
+% 本文档命令
+\usepackage{array}
+\usepackage{mathdots}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+% 修改目录深度
+\setcounter{tocdepth}{3}
+
+\everymath{\displaystyle}%用行间公式（displaystyle）的格式排版所有的行内公式
+
+
+%\usepackage{verbatim}%在codeshow中已引用
+\usepackage{tikz,tkz-euclide}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+%\usepackage{codeshow}%codeshow：为了在codeshow环境中，引用代码，并生成图形。
+
+\usepackage{graphicx}
+%\usepackage{subfigure}
+
+\usepackage{breqn}%breqn 宏包主要提供了 dmath 和 dmath* 等几个环境，产生可以自动折行的显示公式。
+\usepackage{longtable}%长表格，多页可以自动处理。
+
+%【参与编译的文件列表。】
+%\includeonly{preface,chapter01,chapter02,chapter03,chapter04,chapter05}%,%【参与编译的文件列表。】
+
+
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mdframed}
+\usepackage{booktabs,array,multirow}
+\usepackage{esint}
+\usepackage{xeCJK}
+\usepackage{adjustbox}
+\newcommand{\HRule}{\begin{center}\rule{0.5\linewidth}{0.2mm}\end{center}}
+%\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{pifont}
+
+\begin{document}
+	
+	\maketitle
+	
+	\tableofcontents
+	%\listofchanges
+	
+	\mainmatter
+
+	\part{化学反应原理}
+    \chapter{中和滴定实验}
+	\section{滴定实验}
+	
+	我们在研究物质时, 常常需要对物质进行定性分析和定量分析。确定物质的成分, 包括元素、 无机物所含的离子和有机物所含的官能团等, 在化学上叫做定性分析。测定物质中元素、离子、官能团等各成分的含量, 在化学上叫做定量分析。
+	
+	%【思考】现有一瓶未知浓度的 \(\mathrm{{NaOH}}\) 溶液,如何准确测出其浓度?
+	
+	\subsection{酸碱中和滴定}
+	
+	利用中和反应原理, 用已知物质的量浓度的酸 (或碱) 来测定未知物质的量浓度的碱 (或酸) 的方法
+	
+	1、中和反应:
+	
+	2、中和滴定原理:
+	
+	\[
+	\mathrm{{HA}} + \mathrm{{BOH}} = \mathrm{{BA}} + {\mathrm{H}}_{2}\mathrm{O}
+	\]
+	
+%	\(1\mathrm{\;{mol}}\;1\mathrm{\;{mol}}\)
+	
+	即可得 \({\mathrm{c}}_{\left( \mathrm{{HA}}\right) }{\mathrm{V}}_{\left( \mathrm{{HA}}\right) } = {\mathrm{c}}_{\left( \mathrm{{BOH}}\right) }{\mathrm{V}}_{\left( \mathrm{{BOH}}\right) }\)
+	
+	现在我们用 \({0.1000}\mathrm{\;{mol}}/\mathrm{L}\) 的 \(\mathrm{{HCl}}\) 溶液测定未知浓度的 \(\mathrm{{NaOH}}\) 溶液,到底应测得哪些数据才能求出 \({\mathrm{c}}_{\left( \mathrm{{NaOH}}\right) }\) ?
+	
+	\begin{center}
+		\includegraphics[max width=0.5\textwidth]{image/c1.jpg}
+	\end{center}
+	
+	\subsection{滴定实验仪器以及操作要点}
+	
+	\subsubsection{滴定方法的关键}
+	
+	（1）准确测定两种反应物溶液的体积
+	
+	（2）确保标准液、待测液浓度的准确
+	
+	（3）\uline{滴定终点的准确判定}（包括指示剂的合理选用）
+	\subsubsection{实验仪器及试剂}
+	
+	\begin{center}
+		\includegraphics[max width=0.2\textwidth]{image/c2-1.jpg}
+	\end{center}
+	
+	（1）仪器：酸式滴定管、碱式滴定管、滴定管夹、烧杯、锥形瓶、铁架台。
+	
+	\begin{center}
+		\includegraphics[max width=0.2\textwidth]{image/c2-2.jpg}
+	\end{center}
+	\[\mbox{酸式滴定管}\]
+		\[\mbox{润洗--用待装液体洗涤}\]
+	\begin{center}
+		\includegraphics[max width=0.2\textwidth]{image/c2-3.jpg}
+	\end{center}
+		\[\mbox{碱式滴定管}\]
+	 
+	
+	\subsubsection{滴定管的构造特点}
+	
+		\ding{172}标识: 标有温度、刻度、规格（25.00 mL 或 \({50.00}\mathrm{\;{mL}}\) )%圈1
+	
+	\ding{173}刻度：零刻度在\_\_\_，满刻度在\_\_\_；最小刻度为 0.1 ml，精确度为 0.01 ml。%圈2
+	
+	\ding{174}酸式滴定管: 下端是玻璃塞, 能盛装 \_溶液;
+	
+	碱式滴定管: 下端是橡皮管+玻璃小球, 能盛装\_
+	
+	%【思考 1】现在要量取 \({25.00}\mathrm{\;{mL}}\mathrm{{NaOH}}\) 溶液,应该用什么量取? 能不能用量筒? 为什么?
+	
+%	【思考 2】如图是某些仪器的刻度部分示意图, 图中各仪器虚线为所示读数。其中为量筒的是 \_\_\_（填编号，下同），读数为 \(2\text{、}n\mathrm{\;L}\) ；为滴定管的是\_\_\_，读数为 \(2\text{、}\mathrm{{SmL}}\)
+	
+%	\begin{center}
+	%	\includegraphics[max width=0.3\textwidth]{images/0190d453-f338-754b-8cea-9ab8ce034fb0_0_605307.jpg}
+	%\end{center}
+	
+%	① \ding{173}
+	\subsubsection{凡士林的涂抹方式}
+	
+	\begin{center}
+		\includegraphics[max width=0.2\textwidth]{image/c3-1.jpg}
+	\end{center}
+	
+		\[\mbox{涂a和c}\]
+	
+	
+	润洗仪器: 在加入酸、碱之前, 洁净的酸式滴定管和碱式滴定管要分别用所要盛装的酸、碱润洗 \(2 \sim 3\) 次。
+	
+	\ding{173}方法是: 从滴定管上口加入 \(3 \sim 5\mathrm{\;{mL}}\) 所要盛装的酸溶液或碱溶液。倾斜着转动滴定管,使液体润湿全部滴定管内壁。然后, 一手控制活塞 (轻轻转动酸式滴定管的活塞; 或者轻轻挤压碱式滴定管中的玻璃球），将液体从滴定管下部放入预置的烧杯中。
+	
+	\ding{174}加入反应液: 分别将酸溶液、碱溶液加到酸式滴定管、碱式滴定管中,\uwave{ 使液面位于滴定管刻度“0”以上 \(2 \sim 3\mathrm{\;{mL}}\) 处},并将滴定管垂直固定在滴定管夹上。
+	
+	
+	\ding{175}调节起始读数: 在滴定管下放一个烧杯, 调节活塞, 使滴定管尖嘴部分充满反应液, 并使液面处于“0”刻度（或“0”刻度以下），准确读取读数并记录$¥V_{\mbox{始}}$
+	
+	【思考 7】如果滴定管内出现气泡怎么排出气泡? 
+	
+	排气泡: 酸式滴定管 \(\rightarrow\)尖嘴部分朝上,碱式滴定管\(\rightarrow\)
+	
+	\begin{center}
+		\includegraphics[max width=0.2\textwidth]{image/c4-1.jpg}
+	\end{center}
+		\[\mbox{除去碱式滴定管乳胶管中气泡的方法}\]
+	
+	
+	\ding{176} 放液
+	
+	a 从碱式滴定管中放出 \({25.00}\mathrm{{ml}}\) 氢氧化钠溶液于锥形瓶中;
+	
+	
+	
+	\(\mathrm{b}\) 滴入几滴\uwave{酚酞试液}(指示剂),将锥形瓶置于酸式滴定管下方,并在瓶底衬一张白纸。
+	
+		\ding{177}滴定: 左手控制酸式滴定管活塞, 右手摇动锥形瓶, 边滴入盐酸 (当接近终点时, \uwave{改为滴加半滴酸}) , 边不断顺时针方向摇动, 眼睛要始终注视
+	
+	\begin{center}
+		\includegraphics[max width=0.3\textwidth]{image/c4-2.jpg}
+	\end{center}
+	
+	\ding{178}记读数: $\star$ \uwave{当滴入最后半滴HCl,溶液由红色突变为无色,且半分钟内不褪色. 停止滴定,准确记下盐酸读}数 \({\mathrm{V}}_{\text{终}}\) ,并准确求得滴定用去的盐酸体积 \(\mathrm{V} = {\mathrm{V}}_{\text{始 }} - {\mathrm{V}}_{\text{终 }}\) (平行实验 2 -3 次) 
+	
+	滴入最后半滴标准溶液具体操作?
+	
+	\ding{179}计算
+	
+	【经典 2】【2020 年 7 月选考】滴定前, 有关滴定管的正确操作为 (选出正确操作并按序排列,选项可重复使用): 检漏 \(\rightarrow\) 蒸馏水洗涤 \(\rightarrow\) 用滴定液润洗 2 至 3 次 \(\rightarrow\) 装入滴定液至零刻度以上 \(\rightarrow\) 排除气泡 \(\rightarrow\) 调整滴定液液面至零刻度或零刻度以下\( \rightarrow \)记录起始读数 \(\rightarrow\) 开始滴定。
+	
+	
+\subsection{指示剂的选择}
+
+\subsubsection{酸碱指示剂}
+
+（1）酸碱指示剂的变色范围（pH 值） 
+
+\begin{center}
+	\adjustbox{max width=\textwidth}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			\multirow{2}{*}{甲基橙} & \(< {3.1}\) & \({3.1} \sim {4.4}\) & \(> {4.4}\) \\
+			\hline
+			& 红 & 橙 & 黄 \\
+			\hline
+			\multirow{2}{*}{酚酞} & \(< {8.2}\) & \({8.2} \sim {10}\) & \(> {10}\) \\
+			\hline
+			& 无色 & 浅红 & 红 \\
+			\hline
+			\multirow{2}{*}{石蕊} & \(< 5\) & \(5 \sim 8\) & \(> 8\) \\
+			\hline
+			& 红 & 紫 & 蓝 \\
+			\hline
+		\end{tabular}
+	}
+\end{center}
+\paragraph{滴定终点}
+
+\[\mbox{显酸}\Rightarrow\mbox{甲基橙}\]
+\[\mbox{显碱}\Rightarrow\mbox{酚酞}\]
+\paragraph{变化曲线}
+
+若以酸碱中和滴定过程中滴加酸 (或碱) 的量为横轴,以溶液的 \(\mathrm{{pH}}\) 为纵轴,即可绘出的一条溶液 \(\mathrm{{pH}}\) 随酸（或碱）的滴加量而变化的曲线。
+
+\begin{center}
+	\includegraphics[max width=0.3\textwidth]{image/c5.jpg}
+\end{center}
+
+\subsection{小结}
+
+\subsubsection{指示剂的选择原则}
+
+①变色要明显、灵敏;
+
+②指示剂的变色范围要尽可能在滴定过程中的 \(\mathrm{{pH}}\) 值突变范围内。
+
+③指示剂用量不能太多, \(2 \sim 3\) 滴即可:
+
+\subsubsection{指示剂的选择（由滴定曲线可知）}
+
+①强酸强碱相互滴定, 可选用甲基橙或酚酞。
+
+②若反应生成强酸弱碱盐, 溶液呈酸性, 则选用酸性变色范围的指示剂 (甲基橙);
+
+若反应生成强碱弱酸盐, 溶液呈碱性, 则选用碱性变色范围的指示剂 (酚酞)
+
+③石蕊试液因颜色变化不明显, 且变色范围过宽, 一般不作滴定指示剂。
+
+④酸性 \({\mathrm{{KMnO}}}_{4}\) 溶液等本身呈现颜色的滴定试剂,不用另外选择指示剂
+
+\subsubsection{终点判断}
+
+ 滴入最后半滴 XX 标准溶液后, 溶液由 XX 色突变 XX 色, 且半分钟内不褪色。
+
+\begin{center}
+	\adjustbox{max width=\textwidth}{
+		\begin{tabular}{|c|c|c|}
+			\hline
+			指示剂 操作 & 酚酞 & 甲基橙 \\
+			\hline
+			强碱滴定强酸 & 无色变为红色 & 橙色变为黄色 \\
+			\hline
+			强酸滴定强碱 & 红色变为无色 & 黄色变为橙色 \\
+			\hline
+		\end{tabular}
+	}
+\end{center}
+
+\subsection{误差分析}
+
+以一元酸和一元碱的中的滴定为例
+
+\[
+{\mathrm{C}}_{\text{待 }}{\mathrm{V}}_{\text{待 }} = {\mathrm{C}}_{\text{标· }}{\mathrm{V}}_{\text{标 }}
+\]
+
+滴定过程中任何错误操作都有可能导致 \(\mathrm{C}\) 标、 \(\mathrm{V}\) 标、 \(\mathrm{V}\)待 的误差。但在实际操作中认为 \(\mathrm{C}\) 标是已
+
+知的, \({\mathrm{V}}_{\text{待 }}\) 是固定的,对于 \({\mathrm{c}}_{\left( \mathrm{{NaOH}}\right) }  = \frac{{\mathrm{c}}_{\left( \mathrm{{HCl}}\right) }{\mathrm{V}}_{\left( \mathrm{{HCl}}\right) }}{{\mathrm{V}}_{(NaOH)} } 
+$
+
+\[\mbox{读数比实际}\]
+
+\begin{center}
+%	\adjustbox{max width=\textwidth}{
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline
+			\phantom{X} & 产生误差的常见因素 & & 对 \(\mathrm{V}_{\mathrm{HCl}}\) 的影响 & 对 \(\mathbf{C}_{\mathrm{NaOH}}\) 的影响 \\
+			\hline
+			\multirow{4}{*}{滴定前操作} & 未用标准液润洗酸式滴定管 & [HCL]$\downarrow$& \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 未用待测液润洗碱式滴定管 &[NaOH]$\downarrow$& \(\downarrow\) & \(\downarrow\) \\
+			\cline{2-5}
+			& 用待测液润洗锥形瓶 &NaOH$\uparrow$& \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 洗涤后锥形瓶未干燥 &n(NaOH)不变& \(-\) & \(-\) \\
+			\hline
+			\multirow{2}{*}{滴定时读数不准} & 滴定前俯视酸式滴定管，滴定后平视 & & \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 滴定前仰视酸式滴定管，滴定后俯视&  & \(\uparrow\) & \(\uparrow\) \\
+			\hline
+			\multirow{2}{*}{取液时读数不准} & 取待测液时先俯视后仰视& & \(\downarrow\) & \(\downarrow\) \\
+			\cline{2-5}
+			& 取待测液时先仰视后俯视&  &\(\uparrow\) & \(\uparrow\) \\
+			\hline
+			\multirow{6}{*}{操作不当} & 滴定前酸式滴定管有气泡，滴定后气泡消失&  & \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 滴定前酸式滴定管无气泡，滴定后有气泡&  & \(\downarrow\) & \(\downarrow\) \\
+			\cline{2-5}
+			& 滴定结束，滴定管尖端挂一滴液体未滴下 & & \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 滴定过程中，振荡锥形瓶时，不小心将溶液溅出 & & \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 用甲基橙作指示剂，滴至橙色，半分钟内又还原成黄色，不处理就计算 & & \(\uparrow\) & \(\uparrow\) \\
+			\cline{2-5}
+			& 配制标准液的固体有不反应的杂质 & & \(\downarrow\) & \(\uparrow\) \\
+			\hline
+		\end{tabular}
+%	}
+\end{center}
+
+
+\section{其他滴定}
+
+\subsection{氧化还原滴定}
+
+\subsubsection{酸性 \({\mathrm{{KMnO}}}_{4}\) 溶液滴定 \({\mathrm{H}}_{2}{\mathrm{C}}_{2}{\mathrm{O}}_{4}\) 溶液}
+
+原理: \(2{\mathrm{{MnO}}}_{4}^{ - } + 6{\mathrm{H}}^{ + } + 5{\mathrm{H}}_{2}{\mathrm{C}}_{2}{\mathrm{O}}_{4} = {10}{\mathrm{{CO}}}_{2} \uparrow + 2{\mathrm{{Mn}}}^{2 + } + 8{\mathrm{H}}_{2}\mathrm{O}\) ;
+
+指示剂及滴定终点: 酸性 \({\mathrm{{KMnO}}}_{4}\) 溶液本身呈紫红色,不用另外选择指示剂,当滴入最后半滴酸性 \({\mathrm{{KMnO}}}_{4}\) 溶液,溶液由无色变浅红色,且半分钟内不变色,说明达到滴定终点。
+
+\subsubsection{ \({\mathrm{{Na}}}_{2}{\mathrm{\;S}}_{2}{\mathrm{O}}_{3}\) 溶液滴定碘液}
+
+原理: \(2{\mathrm{\;S}}_{2}{\mathrm{O}}_{3}^{2 - } + {\mathrm{I}}_{2} = {\mathrm{S}}_{4}{\mathrm{O}}_{6}^{2 - } + 2{\mathrm{I}}^{ - }\) ;
+
+指示剂及滴定终点: 用淀粉溶液+作指示剂,当滴入最后半滴 \({\mathrm{{Na}}}_{2}{\mathrm{\;S}}_{2}{\mathrm{O}}_{3}\) 溶液,溶液的蓝色褪去, 且半分钟内不恢复原色, 说明达到滴定终点。
+
+
+\chapter{原电池}
+
+\section{原电池}
+
+\textit{将化学能转化为电能的装置, 本质为自发进行的氧化还原反应。}
+
+\paragraph*{正极}
+
+化合价$\downarrow$,得$e^{-}$$\Rightarrow$牺牲阳极的阴极保护法
+
+\paragraph*{负极}
+
+化合价$\uparrow$,失$e^{-}$,氧化反应
+
+\subsection{原电池的构成条件}
+
+1、活性不同的两极 
+2、自发的氧化还原反应
+3、闭合回路 
+4、电解质
+
+\section{盐桥}
+
+\begin{center}
+	\includegraphics[max width=0.5\textwidth]{image/c14.jpg}
+\end{center}
+
+\subsection{盐桥构成}
+
+盐桥里的物质一般是\dotuline{强电解质}而且不与两池中电解质反应, 常使用装有饱和 \(\mathrm{{KCl}}\) 琼脂溶胶的 \(\mathrm{U}\) 形管,离子可以在其中自由移动。
+
+盐桥作用:
+
+电极反应方程式: 
+
+三大流向: 
+
+\section{膜电池}
+
+膜的引入简化了装置, 用离子交换膜分隔成两池, 仅允许特定的离子通过; 且膜能持续、长期使用。
+
+\begin{center}
+	\includegraphics[max width=0.9\textwidth]{image/c16-1.jpg}
+\end{center}
+
+膜的分类:
+ \textit{叫什么就只让什么离子过}
+
+\ding{172}阳离子交换膜%圈1
+
+\ding{173}阴离子交换膜
+
+\ding{174}质子交换膜
+
+只有$H^{+}$能过
+
+\ding{175}双极膜
+
+$H_{2}O\rightleftharpoons H^{+}+OH^{-}$一人去一边
+
+\section{电解池 1}
+
+\subsection{电解池}
+
+\begin{center}
+	\includegraphics[max width=0.2\textwidth]{image/c19.jpg}
+\end{center}
+
+%请从电解水的能量变化和物质变换, 分析电解池的原理。
+
+%\section*{电解池}
+
+\textit{电解池: 把电能转变为化学能的装置。}
+
+\paragraph{构成条件}
+
+1.电源
+
+2.两个电极(只导电,可用惰性电极--石墨,铂Pt,金Au)
+
+3.电解质(水/熔融)
+
+4.闭合回路
+
+\paragraph{两个电极}
+
+\paragraph{流向}
+
+\subparagraph*{电子}
+
+阳$\rightarrow$阴
+
+\subparagraph*{电流}
+
+阴$\rightarrow$阳
+
+\subparagraph*{$\star$离子}
+
+异性相吸(阳离子$\rightarrow$阴极)
+
+\end{document}
