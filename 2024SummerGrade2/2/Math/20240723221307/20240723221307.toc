@@ -1,0 +1,12 @@
+\contentsline {chapter}{\numberline {第 1{} 章}高中数学数列通项公式常用 15 种求法}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}类型 1 (迭加法)}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}类型 2 (迭乘法)}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}类型 3 (退一相减法)}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}类型 3 (构造法 1)}{2}{section.1.4}%
+\contentsline {section}{\numberline {1.5}类型 4 (构造法 2)}{2}{section.1.5}%
+\contentsline {section}{\numberline {1.6}类型 5 (构造法 3)}{2}{section.1.6}%
+\contentsline {section}{\numberline {1.7}类型 6 (构造法 4)}{3}{section.1.7}%
+\contentsline {section}{\numberline {1.8}类型 7 (倒数法)}{3}{section.1.8}%
+\contentsline {section}{\numberline {1.9}类型 8 (构造法 5)}{3}{section.1.9}%
+\contentsline {section}{\numberline {1.10}类型 9 (构造法 6) }{3}{section.1.10}%
+\contentsline {part}{第一部分\hspace {1em}选学: 自招和竞赛需要会要、特征根法}{4}{part.1}%

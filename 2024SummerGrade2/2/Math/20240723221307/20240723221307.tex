@@ -1,0 +1,507 @@
+
+\documentclass[10pt,cn]{elegantbook}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tgtermes}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mdframed}
+\usepackage{booktabs,array,multirow}
+\usepackage{esint}
+\usepackage{xeCJK}
+\usepackage{adjustbox}
+%\graphicspath{ {./images/} }
+
+\usepackage{ulem}
+\usepackage{hyperref}%目录跳转
+
+\usepackage{fontspec} % 用于处理字体
+%\setmainfont{TeX Gyre Termes} % 设置主要字体
+
+
+%\usepackage{fancyhdr}   % 导入 fancyhdr 包，用于定制页眉和页脚
+%\usepackage{datetime}   % 导入 datetime 包，用于格式化日期
+
+
+\usepackage{graphicx}   % 导入 graphicx 包，以便插入图片
+
+
+
+
+%\fancyhead[L]{20240722} % 左侧页眉
+%\fancyhead[R]{\mydate\today} % 右侧页眉，显示当前日期，格式为“日 月 年”
+
+\title{高中数学数列通项公式常用 15 种求法}
+
+\author{宋利峰}
+\date{\today}
+\version{20240723221307}
+\logo{logo.jpg}
+\cover{cover.jpg}
+
+
+
+% 本文档命令
+\usepackage{array}
+\usepackage{mathdots}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+% 修改目录深度
+\setcounter{tocdepth}{3}
+
+\everymath{\displaystyle}%用行间公式（displaystyle）的格式排版所有的行内公式
+
+
+%\usepackage{verbatim}%在codeshow中已引用
+\usepackage{tikz,tkz-euclide}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+%\usepackage{codeshow}%codeshow：为了在codeshow环境中，引用代码，并生成图形。
+
+\usepackage{graphicx}
+%\usepackage{subfigure}
+
+\usepackage{breqn}%breqn 宏包主要提供了 dmath 和 dmath* 等几个环境，产生可以自动折行的显示公式。
+\usepackage{longtable}%长表格，多页可以自动处理。
+
+%【参与编译的文件列表。】
+%\includeonly{preface,chapter01,chapter02,chapter03,chapter04,chapter05}%,%【参与编译的文件列表。】
+
+
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+\usepackage{graphicx}
+\usepackage[export]{adjustbox}
+\usepackage{mdframed}
+\usepackage{booktabs,array,multirow}
+\usepackage{esint}
+\usepackage{xeCJK}
+\usepackage{adjustbox}
+\newcommand{\HRule}{\begin{center}\rule{0.5\linewidth}{0.2mm}\end{center}}
+%\graphicspath{ {./images/} }
+\usepackage{amsmath}
+\usepackage{pifont}
+
+\begin{document}
+	
+	\maketitle
+	
+	\tableofcontents
+	%\listofchanges
+	
+	\mainmatter
+
+
+\chapter{高中数学数列通项公式常用 15 种求法}
+
+
+
+\section{类型 1 (迭加法)} \({a}_{n + 1} - {a}_{n} = f\left( n\right) = \left\{ \begin{array}{l} {2n} - 1 \\ {2}^{n} \\ {2n} - 1 + {2}^{n} \\ \left( {{2n} - 1}\right) {2}^{n - 1} \\ {\log }_{2}^{\frac{n + 1}{n}} \\ \frac{1}{n\left( {n + 1}\right) } \end{array}\right. ,{a}_{1} = 1\) ,求 \({a}_{n}\)
+
+以上 6 种情况都要试着做一遍
+
+例 1: 已知数列 \(\left\{ {a}_{n}\right\}\) 满足 \({a}_{1} = \frac{1}{2},{a}_{n + 1} - {a}_{n} = \frac{1}{{n}^{2} + n}\) ,求 \({a}_{n}\) 。
+
+解: 由条件知: \({a}_{n + 1} - {a}_{n} = \frac{1}{{n}^{2} + n} = \frac{1}{n\left( {n + 1}\right) } = \frac{1}{n} - \frac{1}{n + 1}\)
+
+分别令 \(n = 1,2,3,\cdots ,\left( {n - 1}\right)\) ,代入上式得 \(\left( {n - 1}\right)\) 个等式累加之,即
+
+\[
+\left( {{a}_{2} - {a}_{1}}\right) + \left( {{a}_{3} - {a}_{2}}\right) + \left( {{a}_{4} - {a}_{3}}\right) + \cdots + \left( {{a}_{n} - {a}_{n - 1}}\right)
+\]
+
+\(= \left( {1 - \frac{1}{2}}\right) + \left( {\frac{1}{2} - \frac{1}{3}}\right) + \left( {\frac{1}{3} - \frac{1}{4}}\right) + \cdots + \left( {\frac{1}{n - 1} - \frac{1}{n}}\right)\)
+
+所以 \({a}_{n} - {a}_{1} = 1 - \frac{1}{n}\)
+
+\[
+{a}_{1} = \frac{1}{2},\therefore {a}_{n} = \frac{1}{2} + 1 - \frac{1}{n} = \frac{3}{2} - \frac{1}{n}
+\]
+
+\section{类型 2 (迭乘法)} \(\frac{{a}_{n + 1}}{{a}_{n}} = f\left( n\right) = \left\{ \begin{array}{l} \frac{n + 1}{n} \\ {2}^{n} \end{array}\right. ,{a}_{1} = 1\) ,求 \({a}_{n}\)
+
+例 2: 已知数列 \(\left\{ {a}_{n}\right\}\) 满足 \({a}_{1} = \frac{2}{3},{a}_{n + 1} = \frac{n}{n + 1}{a}_{n}\) ,求 \({a}_{n}\) 。
+
+解: 由条件知 \(\frac{{a}_{n + 1}}{{a}_{n}} = \frac{n}{n + 1}\) ,
+
+分别令 \(n = 1,2,3,\cdots ,\left( {n - 1}\right)\) ,代入上式得 \(\left( {n - 1}\right)\) 个等式累乘之,即
+
+\[
+\frac{{a}_{2}}{{a}_{1}} \cdot \frac{{a}_{3}}{{a}_{2}} \cdot \frac{{a}_{4}}{{a}_{3}} \cdot \cdots \cdot \frac{{a}_{n}}{{a}_{n - 1}} = \frac{1}{2} \times \frac{2}{3} \times \frac{3}{4} \times \cdots \times \frac{n - 1}{n} \Rightarrow \frac{{a}_{n}}{{a}_{1}} = \frac{1}{n}
+\]
+
+
+
+又 \(\because {a}_{1} = \frac{2}{3},\therefore {a}_{n} = \frac{2}{3n}\)
+
+\section{类型 3 (退一相减法)} 递推公式为 \({S}_{n}\) 与 \({a}_{n}\) 的关系式。(或 \({S}_{n} = f\left( {a}_{n}\right)\) )
+
+解法: 这种类型一般利用 \({a}_{n} = \left\{ \begin{array}{l} {S}_{1}\cdots \cdots \cdots \cdots \cdots \cdots \cdots \left( {n = 1}\right) \\ {S}_{n} - {S}_{n - 1}\cdots \cdots \cdots \cdots \left( {n \geq 2}\right) \end{array}\right.\)
+
+与 \({a}_{n} = {S}_{n} - {S}_{n - 1} = f\left( {a}_{n}\right) - f\left( {a}_{n - 1}\right)\) 消去 \({S}_{n}\left( {n \geq 2}\right)\) 或与 \({S}_{n} = f\left( {{S}_{n} - {S}_{n - 1}}\right) \left( {n \geq 2}\right)\) 消去 \({a}_{n}\) 进行求解。
+
+常见题型: 1、 \({S}_{n} = {n}^{2} + n + 1\) ,求 \({a}_{n}\) ( \({S}_{n}\) 与 \(n\) 关系)
+
+2、 \({S}_{n} = 3{a}_{n} + 2\) ,求 \({a}_{n}\) ( \({S}_{n}\) 与 \({a}_{n}\) 关系)
+
+3、 \(\frac{n + 1}{3} = 2{a}_{1} + {2}^{2}{a}_{2} + {2}^{3}{a}_{3} + \cdots + {2}^{n}{a}_{n}\) ,求 \({a}_{n}\left( {n\text{与}{a}_{n}}\right)\)
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 前 \(n\) 项和 \({S}_{n} = 4 - {a}_{n} - \frac{1}{{2}^{n - 2}}\) .
+
+(1) 求 \({a}_{n + 1}\) 与 \({a}_{n}\) 的关系; (2) 求通项公式 \({a}_{n}\) .
+
+解: (1) \({S}_{n} = 4 - {a}_{n} - \frac{1}{{2}^{n - 2}}\) 得: \({S}_{n + 1} = 4 - {a}_{n + 1} - \frac{1}{{2}^{n - 1}}\)
+
+于是 \({S}_{n + 1} - {S}_{n} = \left( {{a}_{n} - {a}_{n + 1}}\right) + \left( {\frac{1}{{2}^{n - 2}} - \frac{1}{{2}^{n - 1}}}\right)\)
+
+所以 \({a}_{n + 1} = {a}_{n} - {a}_{n + 1} + \frac{1}{{2}^{n - 1}} \Rightarrow {a}_{n + 1} = \frac{1}{2}{a}_{n} + \frac{1}{{2}^{n}}\) .
+
+\section{类型 3 (构造法 1)} \({a}_{n + 1} = p{a}_{n} + q\) (其中 \(p,q\) 均为常数, \(\left( {{pq}\left( {p - 1}\right) \neq 0}\right)\) )。
+
+可以转化为 \(\left( {{a}_{n + 1} + \lambda }\right) = p\left( {{a}_{n} + \lambda }\right)\) ,其中 \(\lambda = \frac{q}{p - 1}\)
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = 1,{a}_{n + 1} = 2{a}_{n} + 3\) ,求 \({a}_{n}\) .
+
+解: 设递推公式 \({a}_{n + 1} = 2{a}_{n} + 3\) 可以转化为 \({a}_{n + 1} - \lambda = 2\left( {{a}_{n} - \lambda }\right)\) 即 \({a}_{n + 1} = 2{a}_{n} - \lambda \Rightarrow \lambda = - 3\) .
+
+故递推 \({a}_{n + 1} + 3 = 2\left( {{a}_{n} + 3}\right)\) ,令 \({b}_{n} = {a}_{n} + 3\) ,则 \({b}_{1} = {a}_{1} + 3 = 4\) ,且 \(\frac{{b}_{n + 1}}{{b}_{n}} = \frac{{a}_{n + 1} + 3}{{a}_{n} + 3} = 2\) 。
+
+所以 \(\left\{ {b}_{n}\right\}\) 是以 \({b}_{1} = 4\) 为首项,2 为公比的等比数列, \({b}_{n} = 4 \times {2}^{n - 1} = {2}^{n + 1}\) , 所以 \({a}_{n} = {2}^{n + 1} - 3\) .
+
+\section{类型 4 (构造法 2)} \({a}_{n + 1} = p{a}_{n} + {q}^{n}\) (其中 \(p,q\) 均为常数, \(\left( {{pq}\left( {p - 1}\right) \left( {q - 1}\right) \neq 0}\right)\) )。
+
+(或 \({a}_{n + 1} = p{a}_{n} + r{q}^{n}\) ,其中 \(p,q,r\) 均为常数)。等式两边同除以 \({q}^{n + 1}\) 或者 \({p}^{n}\)
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = \frac{5}{6},{a}_{n + 1} = \frac{1}{3}{a}_{n} + {\left( \frac{1}{2}\right) }^{n + 1}\) ,求 \({a}_{n}\) .
+
+解: 在 \({a}_{n + 1} = \frac{1}{3}{a}_{n} + {\left( \frac{1}{2}\right) }^{n + 1}\) 两边乘以 \({2}^{n + 1}\) 得: \({2}^{n + 1} \cdot {a}_{n + 1} = \frac{2}{3}\left( {{2}^{n} \cdot {a}_{n}}\right) + 1\)
+
+令 \({b}_{n} = {2}^{n} \cdot {a}_{n}\) ,则 \({b}_{n + 1} = \frac{2}{3}{b}_{n} + 1\) ,
+
+解之得: \({b}_{n} = 3 - 2{\left( \frac{2}{3}\right) }^{n}\)
+
+所以 \({a}_{n} = \frac{{b}_{n}}{{2}^{n}} = 3{\left( \frac{1}{2}\right) }^{n} - 2{\left( \frac{1}{3}\right) }^{n}\)
+
+\section{类型 5 (构造法 3)} \({a}_{n + 1} = p{a}_{n} + {an} + b\left( {p \neq 1,0,a \neq 0}\right)\)
+
+解法: 这种类型一般利用待定系数法构造等比数列, 即令
+
+\({a}_{n + 1} + k\left( {n + 1}\right) + m = p\left( {{a}_{n} + {kx} + m}\right)\) ,与已知递推式比较,解出 \(k,\mathrm{\;m}\) 而转化为 \(\left\{ {{a}_{n} + {kn} + m}\right\}\)
+
+是公比为 \(p\) 的等比数列。
+
+例: 设数列 \(\left\{ {a}_{n}\right\} : {a}_{1} = 4,{a}_{n} = 3{a}_{n - 1} + {2n} - 1,\left( {n \geq 2}\right)\) ,求 \({a}_{n}\) .
+
+解: 设 \({b}_{n} = {a}_{n} + {An} + B\) ,则 \({a}_{n} = {b}_{n} - {An} - B\) ,将 \({a}_{n},{a}_{n + 1}\) 代入递推式,得
+
+\[
+{b}_{n} - {An} - B = 3\left\lbrack {{b}_{n - 1} - A\left( {n - 1}\right) - B}\right\rbrack + {2n} - 1
+\]
+
+\[
+= 3{b}_{n - 1} - \left( {{3A} - 2}\right) n - \left( {{3B} - {3A} + 1}\right)
+\]
+
+\(\therefore \left\{ {\begin{array}{l} A = {3A} - 2 \\ B = {3B} - {3A} + 1 \end{array} \Rightarrow \left\{ \begin{array}{l} A = 1 \\ B = 1 \end{array}\right. }\right.\)
+
+\section{类型 6 (构造法 4)} \({a}_{n + 1} = p{a}_{n}^{r}\left( {p > 0,{a}_{n} > 0}\right)\)
+
+解法: 这种类型一般是等式两边取对数后转化为 \({a}_{n + 1} = p{a}_{n} + q\) ,再利用待定系数法求解。
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = 1,{a}_{n + 1} = \frac{1}{a} \cdot {a}_{n}^{2}\left( {a > 0}\right)\) ,求数列 \(\left\{ {a}_{n}\right\}\) 的通项公式.
+
+解: 由 \({a}_{n + 1} = \frac{1}{a} \cdot {a}_{n}^{2}\) 两边取对数得 \(\lg {a}_{n + 1} = 2\lg {a}_{n} + \lg \frac{1}{a}\) ,
+
+令 \({b}_{n} = \lg {a}_{n}\) ,则 \({b}_{n + 1} = 2{b}_{n} + \lg \frac{1}{a}\) ,再利用待定系数法解得: \({a}_{n} = a{\left( \frac{1}{a}\right) }^{{2n} - 1}\) 。
+
+\section{类型 7 (倒数法)} \({a}_{n + 1} = \frac{\lambda {a}_{n}}{p{a}_{n} + q}\)
+
+解法: 这种类型一般是等式两边取倒数后换元转化为 \({a}_{n + 1} = p{a}_{n} + q\) 。
+
+高中阶段涉及到分式形式数列, 通常是采用倒数法或者是一个周期数列
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 满足: \({a}_{n} = \frac{{a}_{n - 1}}{3 \cdot {a}_{n - 1} + 1},{a}_{1} = 1\) ,求数列 \(\left\{ {a}_{n}\right\}\) 的通项公式。
+
+解: 取倒数: \(\frac{1}{{a}_{n}} = \frac{3 \cdot {a}_{n - 1} + 1}{{a}_{n - 1}} = 3 + \frac{1}{{a}_{n - 1}}\)
+
+\(\therefore \left\{ \frac{1}{{a}_{n}}\right\}\) 是等差数列, \(\frac{1}{{a}_{n}} = \frac{1}{{a}_{1}} + \left( {n - 1}\right) \cdot 3 = 1 + \left( {n - 1}\right) \cdot 3 \Rightarrow {a}_{n} = \frac{1}{{3n} - 2}\)
+
+\section{类型 8 (构造法 5)} \(p{a}_{n + 1}{a}_{n} = {a}_{n} - {a}_{n + 1}\)
+
+两边同除以 \({a}_{n + 1}{a}_{n}\)
+
+练习: \(3{a}_{n + 1}{a}_{n} = {a}_{n} - {a}_{n + 1},{a}_{1} = 1\) ,求 \({a}_{n}\)
+
+\section{类型 9 (构造法 6) }递推公式为 \({a}_{n + 2} = p{a}_{n + 1} + q{a}_{n}\) (其中 \(p,q\) 均为常数).
+
+(连续三项时要注意拆中间项)
+
+解法一 (待定系数法) : 先把原递推公式转化为 \({a}_{n + 2} - s{a}_{n + 1} = t\left( {{a}_{n + 1} - s{a}_{n}}\right)\)
+
+其中 \(s,t\) 满足 \(\left\{ \begin{array}{l} s + t = p \\ {st} = - q \end{array}\right.\)
+
+\part{选学: 自招和竞赛需要会要、特征根法}
+
+解法二 (特征根法): 对于由递推公式 \({a}_{n + 2} = p{a}_{n + 1} + q{a}_{n},{a}_{1} = \alpha ,{a}_{2} = \beta\) 结出的数列 \(\left\{ {a}_{n}\right\}\) , 方程 \({x}^{2} - {px} - q = 0\) ,叫做数列 \(\left\{ {a}_{n}\right\}\) 的特征方程。若 \({x}_{1},{x}_{2}\) 是特征方程的两个根,当 \({x}_{1} \neq {x}_{2}\) 时,数列 \(\left\{ {a}_{n}\right\}\) 的通项为 \({a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1}\) ,其中 \(\mathrm{A},\mathrm{B}\) 由 \({a}_{1} = \alpha ,{a}_{2} = \beta\) 决定（即把 \({a}_{1},{a}_{2},{x}_{1},{x}_{2}\) 和 \(n = 1,2\) ,代入 \({a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1}\) ,得到关于 A、B 的方程组),当 \({x}_{1} = {x}_{2}\) 时, 数列 \(\left\{ {a}_{n}\right\}\) 的通项为 \({a}_{n} = \left( {A + {Bn}}\right) {x}_{1}^{n - 1}\) ,其中 \(\mathrm{A},\mathrm{B}\) 由 \({a}_{1} = \alpha ,{a}_{2} = \beta\) 决定 (即把 \({a}_{1},{a}_{2},{x}_{1},{x}_{2}\) 和 \(n = 1,2\) ,代入 \({a}_{n} = \left( {A + {Bn}}\right) {x}_{1}^{n - 1}\) ,得到关于 A.B 的方程组)。
+
+解法一 (待定系数一迭加法) :
+
+数列 \(\left\{ {a}_{n}\right\} : 3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\left( {n \geq 0,n \in N}\right) ,{a}_{1} = a,{a}_{2} = b\) ,求数列 \(\left\{ {a}_{n}\right\}\) 的通项公式。
+
+由 \(3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\) ,得
+
+\({a}_{n + 2} - {a}_{n + 1} = \frac{2}{3}\left( {{a}_{n + 1} - {a}_{n}}\right)\)
+
+且 \({a}_{2} - {a}_{1} = b - a\) 。
+
+则数列 \(\left\{ {{a}_{n + 1} - {a}_{n}}\right\}\) 是以 \(b - a\) 为首项, \(\frac{2}{3}\) 为公比的等比数列,于是
+
+\({a}_{n + 1} - {a}_{n} = \left( {b - a}\right) {\left( \frac{2}{3}\right) }^{n - 1}\) 。把 \(n = 1,2,3,\cdots ,n\) 代入,得
+
+\({a}_{2} - {a}_{1} = b - a,\)
+
+\({a}_{3} - {a}_{2} = \left( {b - a}\right) \cdot \left( \frac{2}{3}\right)\)
+
+\[
+{a}_{4} - {a}_{3} = \left( {b - a}\right) \cdot {\left( \frac{2}{3}\right) }^{2},
+\]
+
+\(\cdots\)
+
+\[
+{a}_{n} - {a}_{n - 1} = \left( {b - a}\right) {\left( \frac{2}{3}\right) }^{n - 2}\text{。}
+\]
+
+把以上各式相加, 得
+
+\[
+{a}_{n} - {a}_{1} = \left( {b - a}\right) \left\lbrack {1 + \frac{2}{3} + \left( \frac{2}{3}\right) + \cdots + {\left( \frac{2}{3}\right) }^{n - 1}}\right\rbrack = \frac{1 - {\left( \frac{2}{3}\right) }^{n - 1}}{1 - \frac{2}{3}}\left( {b - a}\right) \text{。}
+\]
+
+\[
+\therefore {a}_{n} = \left\lbrack {3 - 3{\left( \frac{2}{3}\right) }^{n - 1}}\right\rbrack \left( {b - a}\right) + a = 3\left( {a - b}\right) {\left( \frac{2}{3}\right) }^{n - 1} + {3b} - {2a}\text{。}
+\]
+
+解法二 (特征根法) :
+
+数列 \(\left\{ {a}_{n}\right\} : 3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\left( {n \geq 0,n \in N}\right) ,{a}_{1} = a,{a}_{2} = b\) 的特征方程是:
+
+\(3{x}^{2} - {5x} + 2 = 0.\)
+
+\[
+\Theta {x}_{1} = 1,{x}_{2} = \frac{2}{3}
+\]
+
+\(\therefore {a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1} = A + B \cdot {\left( \frac{2}{3}\right) }^{n - 1}\) . 又由 \({a}_{1} = a,{a}_{2} = b\) ,于是
+
+\[
+\left\{ {\begin{array}{l} a = A + B \\ b = A + \frac{2}{3}B \end{array} \Rightarrow \left\{ \begin{array}{l} A = {3b} - {2a} \\ B = 3\left( {a - b}\right) \end{array}\right. }\right.
+\]
+
+故 \({a}_{n} = {3b} - {2a} + 3\left( {a - b}\right) {\left( \frac{2}{3}\right) }^{n - 1}\)
+
+特征根高考时候涉及较少, 高考难度通常用第一种待定系数构造更好
+
+类型 10 (选学) \(\;{a}_{n + 1} = \frac{p{a}_{n} + q}{r{a}_{n} + h}\)
+
+解法: 如果数列 \(\left\{ {a}_{n}\right\}\) 满足下列条件: 已知 \({a}_{1}\) 的值且对于 \(n \in N\) ,都有 \({a}_{n + 1} = \frac{p{a}_{n} + q}{r{a}_{n} + h}\) (其中 \(p,q,r,h\) 均为常数,即 \({ph} \neq {qr},r \neq 0,{a}_{1} = - \frac{h}{r}\) ),那么,可作特征方程 \(x = \frac{{px} + q}{{rx} + h}\) ,当特征方程有且仅有一根 \({x}_{0}\) 时,则 \(\left\{ \frac{1}{{a}_{n} - {x}_{0}}\right\}\) 是等差数列; 当特征方程有两个相异的根 \({x}_{1},{x}_{2}\) 时,则 \(\left\{ \frac{{a}_{n} - {x}_{1}}{{a}_{n} - {x}_{2}}\right\}\) 是等比数列。
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 满足性质: 对于 \(n \in N\) , \({a}_{n - 1} = \frac{{a}_{n} + 4}{2{a}_{n} + 3}\) 且 \({a}_{1} = 3\) ,求 \(\left\{ {a}_{n}\right\}\) 的通项公式.
+
+解: 数列 \(\left\{ {a}_{n}\right\}\) 的特征方程为 \(x = \frac{x + 4}{{2x} + 3}\) ,变形得 \(2{x}^{2} + {2x} - 4 = 0\) ,其根为 \({\lambda }_{1} = 1,{\lambda }_{2} = - 2\) .
+
+故特征方程有两个相异的根, 使用定理 2 的第(2)部分, 则有
+
+\[
+{c}_{n} = \frac{{a}_{1} - {\lambda }_{1}}{{a}_{1} - {\lambda }_{2}} \cdot {\left( \frac{p - {\lambda }_{1}r}{p - {\lambda }_{2}r}\right) }^{n - 1} = \frac{3 - 1}{3 + 2} \cdot {\left( \frac{1 - 1 \cdot 2}{1 - 2 \cdot 2}\right) }^{n - 1},n \in N
+\]
+
+\[
+\therefore {c}_{n} = \frac{2}{5} \cdot {\left( -\frac{1}{5}\right) }^{n - 1},n \in N\text{.}
+\]
+
+\[
+\therefore {a}_{n} = \frac{{\lambda }_{2}{c}_{n} - {\lambda }_{1}}{{c}_{n} - 1} = \frac{-2 \cdot \frac{2}{5}{\left( -\frac{1}{5}\right) }^{n - 1} - 1}{\frac{2}{5}{\left( -\frac{1}{5}\right) }^{n - 1} - 1},n \in N
+\]
+
+即 \({a}_{n} = \frac{{\left( -5\right) }^{n} - 4}{2 + {\left( -5\right) }^{n}},n \in N\) .
+
+类型 \({11}\;{a}_{n + 1} + {a}_{n} = {pn} + q\) 或 \({a}_{n + 1} \cdot {a}_{n} = p{q}^{n}\)
+
+解法: 这种类型一般可转化为 \(\left\{ {a}_{{2n} - 1}\right\}\) 与 \(\left\{ {a}_{2n}\right\}\) 是等差或等比数列求解。
+
+例: (I)在数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = 1,{a}_{n + 1} = {6n} - {a}_{n}\) ,求 \({a}_{n}\) 。
+
+(II)在数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = 1,{a}_{n}{a}_{n + 1} = {3}^{n}\) ,求 \({a}_{n}\) 。
+
+计算过程略
+
+类型 12 (构造法 3) 递推公式为 \({a}_{n + 2} = p{a}_{n + 1} + q{a}_{n}\) (其中 \(p,q\) 均为常数).
+
+(连续三项时要注意拆中间项)
+
+解法一 (待定系数法): 先把原递推公式转化为 \({a}_{n + 2} - s{a}_{n + 1} = t\left( {{a}_{n + 1} - s{a}_{n}}\right)\)
+
+其中 \(s,t\) 满足 \(\left\{ \begin{array}{l} s + t = p \\ {st} = - q \end{array}\right.\)
+
+\section*{选学: 自招和竞赛需要会要、特征根法}
+
+解法二 (特征根法): 对于由递推公式 \({a}_{n + 2} = p{a}_{n + 1} + q{a}_{n},{a}_{1} = \alpha ,{a}_{2} = \beta\) 结出的数列 \(\left\{ {a}_{n}\right\}\) , 方程 \({x}^{2} - {px} - q = 0\) ,叫做数列 \(\left\{ {a}_{n}\right\}\) 的特征方程。若 \({x}_{1},{x}_{2}\) 是特征方程的两个根,当 \({x}_{1} \neq {x}_{2}\) 时,数列 \(\left\{ {a}_{n}\right\}\) 的通项为 \({a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1}\) ,其中 \(\mathrm{A},\mathrm{B}\) 由 \({a}_{1} = \alpha ,{a}_{2} = \beta\) 决定 (即把 \({a}_{1},{a}_{2},{x}_{1},{x}_{2}\) 和 \(n = 1,2\) ,代入 \({a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1}\) ,得到关于 A、B 的方程组),当 \({x}_{1} = {x}_{2}\) 时, 数列 \(\left\{ {a}_{n}\right\}\) 的通项为 \({a}_{n} = \left( {A + {Bn}}\right) {x}_{1}^{n - 1}\) ,其中 \(\mathrm{A},\mathrm{B}\) 由 \({a}_{1} = \alpha ,{a}_{2} = \beta\) 决定 (即把 \({a}_{1},{a}_{2},{x}_{1},{x}_{2}\) 和 \(n = 1,2\) ,代入 \({a}_{n} = \left( {A + {Bn}}\right) {x}_{1}^{n - 1}\) ,得到关于 A.B 的方程组)。
+
+解法一 (待定系数一迭加法) :
+
+数列 \(\left\{ {a}_{n}\right\} : 3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\left( {n \geq 0,n \in N}\right) ,{a}_{1} = a,{a}_{2} = b\) ,求数列 \(\left\{ {a}_{n}\right\}\) 的通项公式。
+
+由 \(3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\) ,得
+
+\({a}_{n + 2} - {a}_{n + 1} = \frac{2}{3}\left( {{a}_{n + 1} - {a}_{n}}\right)\)
+
+且 \({a}_{2} - {a}_{1} = b - a\) 。
+
+则数列 \(\left\{ {{a}_{n + 1} - {a}_{n}}\right\}\) 是以 \(b - a\) 为首项, \(\frac{2}{3}\) 为公比的等比数列,于是
+
+\({a}_{n + 1} - {a}_{n} = \left( {b - a}\right) {\left( \frac{2}{3}\right) }^{n - 1}\) 。把 \(n = 1,2,3,\cdots ,n\) 代入,得
+
+\[
+{a}_{2} - {a}_{1} = b - a,
+\]
+
+\[
+{a}_{3} - {a}_{2} = \left( {b - a}\right) \cdot \left( \frac{2}{3}\right)
+\]
+
+\[
+{a}_{4} - {a}_{3} = \left( {b - a}\right) \cdot {\left( \frac{2}{3}\right) }^{2},
+\]
+
+...
+
+\[
+{a}_{n} - {a}_{n - 1} = \left( {b - a}\right) {\left( \frac{2}{3}\right) }^{n - 2}\text{。}
+\]
+
+把以上各式相加, 得
+
+\[
+{a}_{n} - {a}_{1} = \left( {b - a}\right) \left\lbrack {1 + \frac{2}{3} + \left( \frac{2}{3}\right) + \cdots + {\left( \frac{2}{3}\right) }^{n - 1}}\right\rbrack = \frac{1 - {\left( \frac{2}{3}\right) }^{n - 1}}{1 - \frac{2}{3}}\left( {b - a}\right) 。
+\]
+
+\(\therefore {a}_{n} = \left\lbrack {3 - 3{\left( \frac{2}{3}\right) }^{n - 1}}\right\rbrack \left( {b - a}\right) + a = 3\left( {a - b}\right) {\left( \frac{2}{3}\right) }^{n - 1} + {3b} - {2a}\) 。 解法二 (特征根法) :
+
+数列 \(\left\{ {a}_{n}\right\} : 3{a}_{n + 2} - 5{a}_{n + 1} + 2{a}_{n} = 0\left( {n \geq 0,n \in N}\right) ,{a}_{1} = a,{a}_{2} = b\) 的特征方程是:
+
+\(3{x}^{2} - {5x} + 2 = 0.\)
+
+\(\Theta {x}_{1} = 1,{x}_{2} = \frac{2}{3}\)
+
+\(\therefore {a}_{n} = A{x}_{1}^{n - 1} + B{x}_{2}^{n - 1} = A + B \cdot {\left( \frac{2}{3}\right) }^{n - 1}\) .
+
+又由 \({a}_{1} = a,{a}_{2} = b\) ,于是
+
+\[
+\left\{ {\begin{array}{l} a = A + B \\ b = A + \frac{2}{3}B \end{array} \Rightarrow \left\{ \begin{array}{l} A = {3b} - {2a} \\ B = 3\left( {a - b}\right) \end{array}\right. }\right.
+\]
+
+故 \({a}_{n} = {3b} - {2a} + 3\left( {a - b}\right) {\left( \frac{2}{3}\right) }^{n - 1}\)
+
+特征根高考时候涉及较少, 高考难度通常用第一种待定系数构造更好
+
+\section*{类型 13 数学归纳法}
+
+解法: 数学归纳法
+
+变式: (2006, 全国 II, 理 22, 本小题满分 12 分)
+
+设数列 \(\left\{ {a}_{n}\right\}\) 的前 \(n\) 项和为 \({S}_{n}\) ,且方程 \({x}^{2} - {a}_{n}x - {a}_{n} = 0\) 有根为 \({S}_{n} - 1,n = 1,2,3,\cdots\)
+
+(I) 求 \({a}_{1},{a}_{2}\) ; (II) \(\left\{ {a}_{n}\right\}\) 通项公式.
+
+解答: (1) 当 \(n = 1\) 时, \({x}^{2} - {a}_{1}x - {a}_{1} = 0\)
+
+有一根为 \({S}_{1} - 1 = {a}_{1} - 1\) ,于是 \({\left( {a}_{1} - 1\right) }^{2} - {a}_{1}\left( {{a}_{1} - 1}\right) - {a}_{1} = 0\)
+
+\(\therefore {a}_{1} = \frac{1}{2}\)
+
+当 \(n = 2\) 时,有一根为 \({S}_{2} - 1 = {a}_{2} - 1\) ,于是 \({\left( {a}_{2} - 1\right) }^{2} - {a}_{2}\left( {{a}_{2} - 1}\right) - {a}_{2} = 0\)
+
+\(\therefore {a}_{2} = \frac{1}{6}\)
+
+(II) 由题设 \({\left( {S}_{n} - 1\right) }^{2} - a\left( {{S}_{n} - 1}\right) - {a}_{n} = 0\)
+
+\({S}_{n}{}^{2} - 2{S}_{n} + 1 - {a}_{n}{S}_{n} = 0\)
+
+当 \(n \geq 2\) 时, \({a}_{n} = {S}_{n} - {S}_{n - 1}\) 代入上式得
+
+\({S}_{n - 1}{S}_{n} - 2{S}_{n} + 1 = 0\)
+
+由（I）知 \({S}_{1} = {a}_{1} = \frac{1}{2}\)
+
+\({S}_{2} = {a}_{2} + {a}_{2} = \frac{1}{2} + \frac{1}{6} = \frac{2}{3}\)
+
+由①可得 \({S}_{3} = \frac{3}{4}\)
+
+猜想: \({S}_{n} = \frac{n}{n + 1},n = 1,2,3\cdots\)
+
+下面用数学归纳法证明这个结论。
+
+(i) \(n = 1\) 时已知结论成立。
+
+(ii) 假设 \(n = k\) 时结论成立,即 \({S}_{k} = \frac{k}{k + 1}\)
+
+当 \(n = k + 1\) 时,由①得 \({S}_{k + 1} = \frac{1}{2 - {S}_{k}}\)
+
+即 \({S}_{k + 1} = \frac{k + 1}{k + 2}\)
+
+故 \(n = k + 1\) 时结论也成立。
+
+综上,由 (i)、(ii) 可知 \({S}_{n} = \frac{n}{n + 1}\) 对所有正整数 \(n\) 都成立
+
+于是当 \(n \geq 2\) 时, \({a}_{n} = {S}_{n} - {S}_{n - 1} = \frac{n}{n + 1} - \frac{n - 1}{n} = \frac{1}{n\left( {n + 1}\right) }\)
+
+又 \(\mathrm{n} = 1\) 时, \({a}_{1} = \frac{1}{2} = \frac{1}{1 \times 2}\) 所以 \(\left\{ {a}_{n}\right\}\) 的通项公式为 \(a = \frac{1}{n\left( {n + 1}\right) },n = 1,2,3\cdots\)
+
+\section*{类型 14 双数列型}
+
+解法: 根据所结两个数列递推公式的关系, 灵活采用累加、累乘、化归等方法求解。
+
+例: 已知数列 \(\left\{ {a}_{n}\right\}\) 中, \({a}_{1} = 1\) ; 数列 \(\left\{ {b}_{n}\right\}\) 中, \({b}_{1} = 0\) 。
+
+当 \(n \geq 2\) 时, \({a}_{n} = \frac{1}{3}\left( {2{a}_{n - 1} + {b}_{n - 1}}\right) ,{b}_{n} = \frac{1}{3}\left( {{a}_{n - 1} + 2{b}_{n - 1}}\right)\) ,求 \({a}_{n},{b}_{n}\) .
+
+解: 因 \({a}_{n} + {b}_{n} = \frac{1}{3}\left( {2{a}_{n - 1} + {b}_{n - 1}}\right) + \frac{1}{3}\left( {{a}_{n - 1} + 2{b}_{n - 1}}\right) = {a}_{n - 1} + {b}_{n - 1}\)
+
+所以 \({a}_{n} + {b}_{n} = {a}_{n - 1} + {b}_{n - 1} = {a}_{n - 2} + {b}_{n - 2} = \cdots = {a}_{2} + {b}_{2} = {a}_{1} + {b}_{1} = 1\)
+
+即 \({a}_{n} + {b}_{n} = 1\) . ...(1)
+
+又因为 \({a}_{n} - {b}_{n} = \frac{1}{3}\left( {{a}_{n - 1} - {b}_{n - 1}}\right) = {\left( \frac{1}{3}\right) }^{2}\left( {{a}_{n - 2} - {b}_{n - 2}}\right) = \cdots = {\left( \frac{1}{3}\right) }^{n - 1}\left( {{a}_{1} - {b}_{1}}\right) = {\left( \frac{1}{3}\right) }^{n - 1}\)
+
+即 \({a}_{n} - {b}_{n} = {\left( \frac{1}{3}\right) }^{n - 1}\) ....(2)
+
+由（1）、（2）得: \({a}_{n} = \frac{1}{2}\left\lbrack {1 + {\left( \frac{1}{3}\right) }^{n - 1}}\right\rbrack ,{b}_{n} = \frac{1}{2}\left\lbrack {1 - {\left( \frac{1}{3}\right) }^{n - 1}}\right\rbrack\) .
+
+类型 15 周期型
+
+解法: 由递推式计算出前几项, 寻找周期.
+
+例: 由数列 \(\left\{ {a}_{n}\right\}\) 满足 \({a}_{n + 1} = \left\{ \begin{array}{l} 2{a}_{n},\left( {0 \leq {a}_{n} \leq \frac{1}{2}}\right) \\ 2{a}_{n} - 1,\left( {\frac{1}{2} \leq {a}_{n} < 1}\right) \end{array}\right.\) ,若 \({a}_{1} = \frac{6}{7}\) ,则 \({a}_{2017}\) 的值为 \(- \frac{6}{7}\) \_\_\_.
+
+变式: \(\left( {{2005}\text{,湖南,文,5}}\right)\)
+
+已知数列 \(\left\{ {a}_{n}\right\}\) 满足 \({a}_{1} = 0,{a}_{n + 1} = \frac{{a}_{n} - \sqrt{3}}{\sqrt{3}{a}_{n} + 1}\left( {n \in {N}^{ * }}\right)\) ,则 \({a}_{20} = \left( \mathrm{\;B}\right)\)
+
+A. 0 B. \(- \sqrt{3}\) C. \(\sqrt{3}\) D. \(\frac{\sqrt{3}}{2}\)
+\end{document}
