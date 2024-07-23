@@ -6,4 +6,14 @@
 
 ## 更新日志
 
-*20240723162723* 电解池2-离子交换膜
+### **数学**
+
+*20240723221307* [宋利峰-高中数学数列通项公式常用 15 种求法](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240723221307)
+
+### **英语**
+
+### **物理**
+
+### **化学**
+
+*20240723162723* [电解池2-离子交换膜](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240723162723)
