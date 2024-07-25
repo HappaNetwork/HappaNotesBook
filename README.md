@@ -17,3 +17,5 @@
 ### **化学**
 
 *20240723162723* [电解池2-离子交换膜](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240723162723)
+
+*20240725090259* [结构化学-泡利原理](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240725090259)
