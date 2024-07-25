@@ -10,6 +10,8 @@
 
 *20240723221307* [宋利峰-高中数学数列通项公式常用 15 种求法](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240723221307)
 
+*20240719105707* [上传解析几何的笔记](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240719105707)
+
 ### **英语**
 
 ### **物理**
