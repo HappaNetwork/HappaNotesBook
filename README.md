@@ -23,3 +23,5 @@
 *20240725090259* [结构化学-泡利原理](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240725090259)
 
 *20240727163049* [元素周期律](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240727163049)
+
+*20240731152703* [晶胞](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240731152703)
