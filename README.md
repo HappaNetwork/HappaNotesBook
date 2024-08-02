@@ -12,6 +12,8 @@
 
 *20240719105707* [上传解析几何的笔记](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240719105707)
 
+*20240801092003* [数列](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240801092003)
+
 ### **英语**
 
 ### **物理**
