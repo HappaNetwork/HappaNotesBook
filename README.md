@@ -18,6 +18,8 @@
 
 ### **物理**
 
+*20240803125929* [电阻的测定](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240803125929)
+
 ### **化学**
 
 *20240723162723* [电解池2-离子交换膜](https://github.com/HappaNetwork/HappaNotesBook/releases/tag/20240723162723)
